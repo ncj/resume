@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Nat Johnson">
+        <meta name="description" content="Resume.  Copyright 2020 by Nathaniel Johnson.">
+        <title>Nat Johnson - Resume</title>
+        <!-- inline styles so that this can be sent as a single file -->
+        <style>
+            body {
+                font-family: Arial, Helvetica, Sans-Serif;
+                letter-spacing: 0.1vw;
+                font-size: 1vw;
+                line-height: 1.5vw;
+                margin: 0;
+            }
+
+            @media print {
+
+            }
+
+            @media screen {
+                body {
+                    width: 100%;
+                    -webkit-font-smoothing: antialiased;
+                }
+                div {
+                    margin: 0;
+                    padding: 0;
+                }
+                div.pageFrame {
+                    position: relative;
+                    width: 98%;
+                }
+                div.name {
+                    position: absolute;
+                    left: 10%;
+                    top: 5%;
+                    width: 40%;
+                    text-align: left;
+                    font-size: 5vw;
+                    font-weight: 600;
+                    letter-spacing: 2%;
+                    padding: 4vw 1vw 2vw 1vw;
+                }
+                div.personalInfoFrame {
+                    position: absolute;
+                    left: 60%;
+                    top: 2%;
+                    width: 30%;
+                    text-align: left;
+                }
+                div.linkedIn,
+                div.github {
+                    position: absolute;
+                    left: 12%;
+                    width: 90%;
+                    font-size: 1vw;
+                }
+                div.linkedIn {
+                    top: 9vw;
+                }
+                div.github {
+                    top: 12vw;
+                }
+
+                div.p1 {
+                    left: 13vw;
+                    top: 13vw;
+                }
+                div.p2 {
+                    left: -13vw;
+                    top: 13vw;
+                }
+                div.p3 {
+                    left: 13vw;
+                    top: -13vw;
+                }
+                div.p4 {
+                    left: -6vw;
+                    top: 13vw;
+                }
+                div.p5 {
+                    left: -13vw;
+                    top: -13vw;
+                }
+                div.p6 {
+                    left: 13vw;
+                    top: 0vw;
+                }
+                div.p7 {
+                    left: 0vw;
+                    top: 13vw;
+                }
+                div.p8 {
+                    left: -6vw;
+                    top: -13vw;
+                }
+                div.p9 {
+                    left: 0vw;
+                    top: -13vw;
+                }
+                div.p10 {
+                    left: -13vw;
+                    top: 0vw;
+                }
+                div.p11 {
+                    left: 13vw;
+                    top: -6vw;
+                }
+                div.p12 {
+                    left: -13vw;
+                    top: -6vw;
+                }
+
+                div.addressFrame {
+                    position: absolute;
+                    top: 2vw;
+                    width: 100%;
+                    cursor: pointer;
+                }
+                div.addressFrame .placeholder {
+                    z-index: 3;
+                    width: 12vw;
+                    padding: 1.5vw;
+                    position: absolute;
+                    text-align: center;
+                    opacity: 1;
+                    border-radius: .3vw;
+                    border: 1px solid;
+                    transition: 0.8s;
+                    transition-property: opacity;
+                    transition-delay: 0.2s;
+                    transition-timing-function: ease-in;
+                }
+                div.addressFrame .placeholder:hover {
+                    opacity: 0;
+                }
+                div.addressFrame .address {
+                    z-index: 2;
+                    position: absolute;
+                    opacity: 0;
+                    transition: 1s;
+                }
+                div.addressFrame .placeholder:hover ~ .address {
+                    opacity: 1;
+                }
+                div.addressFrame .placeholder:hover ~ .p1 {
+                    left: 1vw;
+                    top: 1vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p2 {
+                    left: 2vw;
+                    top: 1vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p3 {
+                    left: 3vw;
+                    top: 1vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p4 {
+                    left: 4.3vw;
+                    top: 1vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p5 {
+                    left: 9.8vw;
+                    top: 1vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p6 {
+                    left: 12.8vw;
+                    top: 1vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p7 {
+                    left: 1vw;
+                    top: 2.5vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p8 {
+                    left: 6.3vw;
+                    top: 2.5vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p9 {
+                    left: 9.4vw;
+                    top: 2.5vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p10 {
+                    left: 11.5vw;
+                    top: 2.5vw;
+                }
+
+                div.emailFrame {
+                    position: absolute;
+                    top: 8vw;
+                    width: 100%;
+                    cursor: pointer;
+                }
+                div.emailFrame .placeholder {
+                    z-index: 3;
+                    width: 14vw;
+                    padding: 0.5vw;
+                    position: absolute;
+                    text-align: center;
+                    opacity: 1;
+                    border-radius: .3vw;
+                    border: 1px solid;
+                    transition: 0.8s;
+                    transition-property: opacity;
+                    transition-delay: 0.2s;
+                    transition-timing-function: ease-in;
+                }
+                div.emailFrame .placeholder:hover {
+                    opacity: 0;
+                }
+                div.emailFrame .email {
+                    z-index: 2;
+                    position: absolute;
+                    opacity: 0;
+                    transition: 1s;
+                }
+                div.emailFrame .placeholder:hover ~ .email {
+                    top: 1vw;
+                    opacity: 1;
+                }
+                div.emailFrame .placeholder:hover ~ .p1 {
+                    left: 1vw;
+                }
+                div.emailFrame .placeholder:hover ~ .p2 {
+                    left: 2.8vw;
+                }
+                div.emailFrame .placeholder:hover ~ .p3 {
+                    left: 3.6vw;
+                }
+                div.emailFrame .placeholder:hover ~ .p4 {
+                    left: 8vw;
+                }
+                div.emailFrame .placeholder:hover ~ .p5 {
+                    left: 9.2vw;
+                }
+                div.emailFrame .placeholder:hover ~ .p6 {
+                    left: 12.5vw;
+                }
+                div.emailFrame .placeholder:hover ~ .p7 {
+                    left: 13vw;
+                }
+
+                div.phoneFrame {
+                    position: absolute;
+                    width: 100%;
+                    top: 12vw;
+                    cursor: pointer;
+                }
+                div.phoneFrame .placeholder {
+                    z-index: 3;
+                    width: 14vw;
+                    padding: 0.5vw;
+                    position: absolute;
+                    text-align: center;
+                    opacity: 1;
+                    border-radius: .3vw;
+                    border: 1px solid;
+                    transition: 0.8s;
+                    transition-property: opacity;
+                    transition-delay: 0.2s;
+                    transition-timing-function: ease-in-out;
+                }
+                div.phoneFrame .placeholder:hover {
+                    opacity: 0;
+                }
+                div.phoneFrame .phone {
+                    z-index: 2;
+                    position: absolute;
+                    height: 1vw;
+                    opacity: 0;
+                    transition: 1s;
+                    transition-delay: 0.3s;
+                    transition-timing-function: ease-in-out;
+                }
+                div.p4 {
+                    left: 4vw;
+                    top: 0.5vw;
+                }
+                div.p8 {
+                    left: 8vw;
+                    top: 0.5vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .phone {
+                    top: 0.5vw;
+                    opacity: 1;
+                }
+                div.phoneFrame .placeholder:hover ~ .p1 {
+                    left: 1vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p2 {
+                    left: 2vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p3 {
+                    left: 3vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p5 {
+                    left: 5vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p6 {
+                    left: 6vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p7 {
+                    left: 7vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p9 {
+                    left: 9vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p10 {
+                    left: 10vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p11 {
+                    left: 11vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p12 {
+                    left: 12vw;
+                }
+                div.summary {
+                    position: absolute;
+                    width: 86%;
+                    left: 5%;
+                    top: 18vw;
+                    margin: 0 auto;
+                    padding: 2vw;
+                    border-top: 1px solid;
+                    border-bottom: 1px solid;
+                    font-size: 1.2vw;
+                    line-height: 2vw;
+                }
+                div.experienceFrame {
+                    position: absolute;
+                    width: 88%;
+                    left: 0;
+                    top: 28vw;
+                    padding: 0 5% 5% 5%;
+                }
+
+                div.experience,
+                div.education {
+                    padding: 1vw;
+                    font-size: 2vw;
+                    font-weight: bold;
+                    letter-spacing: 2%;
+                    text-transform: uppercase;
+                }
+                div.company,
+                div.schoolName {
+                    padding: 1vw;
+                    font-size: 1.5vw;
+                    display: inline-block;
+                    line-height: 2vw;
+                }
+                div.company {
+                    width: 13vw;
+                }
+                div.schoolName {
+                    width: 17vw;
+                }
+                div.dateRange,
+                div.schoolYear {
+                    width: 20vw;
+                    padding: 1vw;
+                    line-height: 2vw;
+                    font-style: italic;
+                    display: inline-block;
+                }
+                div.title,
+                div.degree {
+                    width: 20vw;
+                    padding: 1vw;
+                    line-height: 2vw;
+                    font-size: 1.2vw;
+                    display: inline-block;
+                }
+                div.workDone,
+                div.schoolDescription {
+                    padding: 0 2vw 1vw 2vw;
+                }
+
+                ul {
+                    margin: 0 0 1vw 2vw;
+                    padding: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pageFrame">
+            <div class="name">Nat Johnson</div>
+            <div class="linkedIn">
+                LinkedIn: <a href="https://www.linkedin.com/in/nat-johnson-8b68b4/">https://www.linkedin.com/in/nat-johnson-8b68b4/</a>
+            </div>
+            <div class="github">
+                Resume: <a href="https://www.github.com/ncj/resume/">https://www.github.com/ncj/resume/</a>
+            </div>
+            <div class="personalInfoFrame">
+                <div class="addressFrame">
+                    <div class="placeholder">address</div>
+                    <div class="address p8">View,</div>
+                    <div class="address p9">CA</div>
+                    <div class="address p7">Mountain</div>
+                    <div class="address p5">Park</div>
+                    <div class="address p3">5</div>
+                    <div class="address p4">Whisman</div>
+                    <div class="address p2">4</div>
+                    <div class="address p6">Dr.</div>
+                    <div class="address p1">4</div>
+                    <div class="address p10">94043</div>
+                </div>
+                <div class="emailFrame">
+                    <div class="placeholder">email</div>
+                    <div class="email p7">com</div>
+                    <div class="email p1">nat</div>
+                    <div class="email p2">_</div>
+                    <div class="email p5">yahoo</div>
+                    <div class="email p3">johnson</div>
+                    <div class="email p6">.</div>
+                    <div class="email p4">@</div>
+                </div>
+                <div class="phoneFrame">
+                    <div class="placeholder">phone</div>
+                    <div class="phone p12">1</div>
+                    <div class="phone p1">4</div>
+                    <div class="phone p3">8</div>
+                    <div class="phone p6">1</div>
+                    <div class="phone p9">4</div>
+                    <div class="phone p11">7</div>
+                    <div class="phone p2">0</div>
+                    <div class="phone p5">3</div>
+                    <div class="phone p7">3</div>
+                    <div class="phone p10">6</div>
+                    <div class="phone p8">&ndash;</div>
+                    <div class="phone p4">&ndash;</div>
+                </div>
+            </div>
+            <div class="summary">
+                Full Stack Web engineer, with an emphasis towards front-end.  Lifelong learner with 20+ years of startup experience, comfortable diving into any new platform or language.  Passionate about creating excellent code that elevates the user experience.
+            </div>
+            <div class="experienceFrame">
+                <div class="experience">Experience</div>
+                <div class="companyFrame">
+                    <div class="workTitle">
+                        <div class="company">
+                            MZ
+                        </div>
+                        <div class="title">
+                            Senior Software Engineer
+                        </div>
+                        <div class="dateRange">
+                            Oct 2017 - May 2020
+                        </div>
+                    </div>
+                    <div class="workDone">
+                        Built admin tools for online game management:
+                        <ul>
+                            <li>Created new admin tools in React/Redux.</li>
+                            <li>Improved existing admin tools using React/Redux or Angular.</li>
+                            <li>Built and updated API controller code and database tables (PHP/SQL).</li>
+                        </ul>
+                        From mid-2018, as primary engineer for MZ's external marketing websites:
+                        <ul>
+                            <li>Launched two brand new game websites and a completely revampled MZ corporate site.</li>
+                            <li>Updated four additional game websites, cleaning up templates and improving localization code.
+                            <li>Installed and/or configured/updated a content management system for each of these sites (Craft CMS), supporting between 7 and 14 languages for each game site.  Set up page templates, input fields, users/permissions, and localization, and updated Craft from version 2 to version 3.</li>
+                            <li>Built PHP code and databases to store user information, send out email and SMS messages, perform GeoIP lookups, and additional backend functionality.
+                            <li>Managed AWS configuration for all marketing website staging and production servers, including Cloudfront, EC2 servers and load balancers, Route 53, SSL Certs, and security policy.</li>
+                            <li>Created and/or updated Nginx configurations for all staging and production servers.</li>
+                            <li>Maintained and improved Python build scripts for all external marketing websites.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="companyFrame">
+                    <div class="workTitle">
+                        <div class="company">
+                            IMVU
+                        </div>
+                        <div class="title">
+                            Lead Software Engineer
+                        </div>
+                        <div class="dateRange">
+                            Oct 2014 - Sept 2017
+                        </div>
+                    </div>
+                    <div class="workDone">
+                        Worked on the IMVU Next product (imvu.com/next), a web-based experience which allowed users to create and customize a 3D avatar, shop for virtual clothes and accessories, and interact with other users via messages, feed posts, animated stickers, and by joining interactive 3D chat rooms. Worked on many front end features of the site, including friend lists, messaging, shopping, payment processing, photobooth, inventory/outfit management, and more. Front end coding was done in JavaScript using the IMVU.js framework which included jQuery, Underscore, and Backbone. In addition to front end coding, also worked on the back end PHP code for many features, designed and implemented new APIs, and was responsible for writing technical specs and tasking out projects, as well as mentoring new engineers, and fixing emergency interrupt bugs.
+                    </div>
+                </div>
+                <div class="companyFrame">
+                    <div class="workTitle">
+                        <div class="company">
+                            AppSense
+                        </div>
+                        <div class="title">
+                            Senior Design Engineer
+                        </div>
+                        <div class="dateRange">
+                            Feb 2012 - Oct 2014
+                        </div>
+                    </div>
+                    <div class="workDone">
+                        Architected and built the front-end and middleware layer code for the DataNow Admin Console, and DataNow Web Client, using Javascript, jQuery, and PHP.  DataNow was a secure enterprise data management/sharing service that could be easily installed and managed by a customer on their own internal network.  The Admin Console allowed management of the applicance, including uploading license files and new server patches, product settings, and user policy configuration.  The Admin Console middleware code connected to proprietary REST APIs as well as LDAP servers.  The DataNow Web Client was a single-page web application that allowed individual users to securely access and share files in DataNow through a web-based interface.
+                    </div>
+                </div>
+                <div class="companyFrame">
+                    <div class="workTitle">
+                        <div class="company">
+                            ebrary
+                        </div>
+                        <div class="title">
+                            Senior Software Engineer
+                        </div>
+                        <div class="dateRange">
+                            Oct 2000 - July 2011
+                        </div>
+                    </div>
+                    <div class="workDone">
+                        Member of the six-person engineering team which created the original Ebrary site for its initial launch in May 2001. Worked on many parts of the site in different roles, using Java/JSP, and HTML/CSS/JavaScript. Projects included payment processing, internationalization, build/release scripts, internal technology prototypes, customer support tools, reports, and custom projects for ebrary partners.
+                    </div>
+                </div>
+                <div class="education">Education</div>
+                <div class="schoolFrame">
+                    <div class="schoolTitle">
+                        <div class="schoolName">
+                            Stanford University
+                        </div>
+                        <div class="degree">
+                            M.S., Computer Science
+                        </div>
+                        <div class="schoolYear">
+                            1995
+                        </div>
+                    </div>
+                    <div class="schoolDescription">
+                        Focus on Human Computer Interaction, under advisor Terry Winograd.
+                    </div>
+                </div>
+                <div class="schoolFrame">
+                    <div class="schoolTitle">
+                        <div class="schoolName">
+                            Haverford College
+                        </div>
+                        <div class="degree">
+                            B.S., Physics
+                        </div>
+                        <div class="schoolYear">
+                            1993
+                        </div>
+                    </div>
+                    <div class="schoolDescription">
+                        Degree included a "Concentration in Computer Science" (similar to a minor).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
