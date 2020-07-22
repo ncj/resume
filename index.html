@@ -13,6 +13,7 @@
                 font-size: 1vw;
                 line-height: 1.5vw;
                 margin: 0;
+                background: #ffffff;
             }
 
             @media print {
@@ -27,6 +28,14 @@
                 div {
                     margin: 0;
                     padding: 0;
+                }
+                a,
+                a:visited {
+                    color: #00aadd;
+                }
+                a:active,
+                a:hover {
+                    color: #99ddff;
                 }
                 div.pageFrame {
                     position: relative;
@@ -126,12 +135,13 @@
                     position: absolute;
                     text-align: center;
                     opacity: 1;
-                    border-radius: .3vw;
-                    border: 1px solid;
+                    border-radius: 1vw;
                     transition: 0.8s;
                     transition-property: opacity;
                     transition-delay: 0.2s;
                     transition-timing-function: ease-in;
+                    background: linear-gradient(0.4turn, #ddffff, #99ddff);
+                    box-shadow: 0.3vw 0.3vw 0.8vw #000000;
                 }
                 div.addressFrame .placeholder:hover {
                     opacity: 0;
@@ -188,7 +198,7 @@
 
                 div.emailFrame {
                     position: absolute;
-                    top: 8vw;
+                    top: 8.5vw;
                     width: 100%;
                     cursor: pointer;
                 }
@@ -199,12 +209,13 @@
                     position: absolute;
                     text-align: center;
                     opacity: 1;
-                    border-radius: .3vw;
-                    border: 1px solid;
+                    border-radius: 1vw;
                     transition: 0.8s;
                     transition-property: opacity;
                     transition-delay: 0.2s;
                     transition-timing-function: ease-in;
+                    background: linear-gradient(0.4turn, #ddffff, #99ddff);
+                    box-shadow: 0.3vw 0.3vw 0.8vw #000000;
                 }
                 div.emailFrame .placeholder:hover {
                     opacity: 0;
@@ -216,7 +227,7 @@
                     transition: 1s;
                 }
                 div.emailFrame .placeholder:hover ~ .email {
-                    top: 1vw;
+                    top: 0.5vw;
                     opacity: 1;
                 }
                 div.emailFrame .placeholder:hover ~ .p1 {
@@ -244,7 +255,7 @@
                 div.phoneFrame {
                     position: absolute;
                     width: 100%;
-                    top: 12vw;
+                    top: 13vw;
                     cursor: pointer;
                 }
                 div.phoneFrame .placeholder {
@@ -254,12 +265,13 @@
                     position: absolute;
                     text-align: center;
                     opacity: 1;
-                    border-radius: .3vw;
-                    border: 1px solid;
+                    border-radius: 1vw;
                     transition: 0.8s;
                     transition-property: opacity;
                     transition-delay: 0.2s;
                     transition-timing-function: ease-in-out;
+                    background: linear-gradient(0.4turn, #ddffff, #99ddff);
+                    box-shadow: 0.3vw 0.3vw 0.8vw #000000;
                 }
                 div.phoneFrame .placeholder:hover {
                     opacity: 0;
@@ -322,8 +334,8 @@
                     top: 18vw;
                     margin: 0 auto;
                     padding: 2vw;
-                    border-top: 1px solid;
-                    border-bottom: 1px solid;
+                    border-top: 1px dotted;
+                    border-bottom: 1px dotted;
                     font-size: 1.2vw;
                     line-height: 2vw;
                 }
@@ -343,6 +355,13 @@
                     letter-spacing: 2%;
                     text-transform: uppercase;
                 }
+
+                div.education {
+                    padding-top: 2vw;
+                    border-top: 1px dotted;
+                    margin-top: 1vw;
+                }
+
                 div.company,
                 div.schoolName {
                     padding: 1vw;
@@ -351,18 +370,10 @@
                     line-height: 2vw;
                 }
                 div.company {
-                    width: 13vw;
+                    width: 11vw;
                 }
                 div.schoolName {
                     width: 17vw;
-                }
-                div.dateRange,
-                div.schoolYear {
-                    width: 20vw;
-                    padding: 1vw;
-                    line-height: 2vw;
-                    font-style: italic;
-                    display: inline-block;
                 }
                 div.title,
                 div.degree {
@@ -370,6 +381,14 @@
                     padding: 1vw;
                     line-height: 2vw;
                     font-size: 1.2vw;
+                    display: inline-block;
+                }
+                div.dateRange,
+                div.schoolYear {
+                    width: auto;
+                    padding: 1vw;
+                    line-height: 2vw;
+                    font-style: italic;
                     display: inline-block;
                 }
                 div.workDone,
@@ -382,20 +401,256 @@
                     padding: 0;
                 }
             }
+            @media screen and (max-width: 800px) {
+                body {
+                    letter-spacing: 0.2vw;
+                    font-size: 2vw;
+                    line-height: 3vw;
+                }
+                div.name {
+                    position: absolute;
+                    left: 10%;
+                    top: 5%;
+                    width: 78%;
+                    text-align: center;
+                    font-size: 10vw;
+                    font-weight: 600;
+                    letter-spacing: 3%;
+                    padding: 6vw 2vw 3vw 2vw;
+                }
+                div.linkedIn,
+                div.github {
+                    position: absolute;
+                    left: 0%;
+                    width: 100%;
+                    font-size: 2vw;
+                    text-align: center;
+                }
+                div.linkedIn {
+                    top: 14.5vw;
+                }
+                div.github {
+                    top: 19.5vw;
+                }
+                div.personalInfoFrame {
+                    position: absolute;
+                    top: 20%;
+                    left: 24%;
+                    width: 50%;
+                    margin: 0 auto;
+                    text-align: left;
+                }
+                div.addressFrame {
+                    top: 25vw;
+                }
+                div.addressFrame .placeholder {
+                    width: 50vw;
+                    padding: 3vw 1vw;
+                    border-radius: 2vw;
+                    box-shadow: 0.6vw 0.6vw 1.6vw #000000;
+                    font-size: 3vw;
+                }
+                div.addressFrame .address {
+                    padding-left: 12vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p1 {
+                    left: 2vw;
+                    top: 2vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p2 {
+                    left: 4vw;
+                    top: 2vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p3 {
+                    left: 6vw;
+                    top: 2vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p4 {
+                    left: 8.6vw;
+                    top: 2vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p5 {
+                    left: 19.6vw;
+                    top: 2vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p6 {
+                    left: 25.6vw;
+                    top: 2vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p7 {
+                    left: 2vw;
+                    top: 5vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p8 {
+                    left: 12.6vw;
+                    top: 5vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p9 {
+                    left: 19vw;
+                    top: 5vw;
+                }
+                div.addressFrame .placeholder:hover ~ .p10 {
+                    left: 23vw;
+                    top: 5vw;
+                }
+                div.emailFrame {
+                    top: 37vw;
+                }
+                div.emailFrame .placeholder {
+                    width: 50vw;
+                    padding: 1vw;
+                    border-radius: 2vw;
+                    box-shadow: 0.6vw 0.6vw 1.6vw #000000;
+                    font-size: 3vw;
+                }
+                div.emailFrame .email {
+                    padding-left: 11vw;
+                }
+                div.emailFrame .placeholder:hover ~ .p1 {
+                    left: 2vw;
+                }
+                div.emailFrame .placeholder:hover ~ .p2 {
+                    left: 5.6vw;
+                }
+                div.emailFrame .placeholder:hover ~ .p3 {
+                    left: 7.2vw;
+                }
+                div.emailFrame .placeholder:hover ~ .p4 {
+                    left: 16vw;
+                }
+                div.emailFrame .placeholder:hover ~ .p5 {
+                    left: 18.4vw;
+                }
+                div.emailFrame .placeholder:hover ~ .p6 {
+                    left: 25vw;
+                }
+                div.emailFrame .placeholder:hover ~ .p7 {
+                    left: 26vw;
+                }
+
+                div.phoneFrame {
+                    top: 45vw;
+                }
+                div.phoneFrame .placeholder {
+                    width: 50vw;
+                    padding: 1vw;
+                    border-radius: 2vw;
+                    box-shadow: 0.6vw 0.6vw 1.6vw #000000;
+                    font-size: 3vw;
+                }
+                div.phoneFrame .phone {
+                    padding-left: 12vw;
+                }
+                div.p4 {
+                    left: 8vw;
+                    top: 1vw;
+                }
+                div.p8 {
+                    left: 16vw;
+                    top: 1vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .phone {
+                    top: 1vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p1 {
+                    left: 2vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p2 {
+                    left: 4vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p3 {
+                    left: 6vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p5 {
+                    left: 10vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p6 {
+                    left: 12vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p7 {
+                    left: 14vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p9 {
+                    left: 18vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p10 {
+                    left: 20vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p11 {
+                    left: 22vw;
+                }
+                div.phoneFrame .placeholder:hover ~ .p12 {
+                    left: 24vw;
+                }
+                div.summary {
+                    top: 54vw;
+                    padding: 4vw;
+                    font-size: 2vw;
+                    line-height: 3vw;
+                }
+                div.experienceFrame {
+                    position: absolute;
+                    width: 88%;
+                    left: 0;
+                    top: 78vw;
+                    padding: 0 5% 5% 5%;
+                }
+                div.experience,
+                div.education {
+                    padding: 2vw;
+                    font-size: 4vw;
+                }
+
+                div.education {
+                    padding-top: 4vw;
+                    margin-top: 2vw;
+                }
+
+                div.company,
+                div.schoolName {
+                    padding: 2vw;
+                    font-size: 3vw;
+                    line-height: 4vw;
+                }
+                div.company {
+                    width: 13vw;
+                }
+                div.schoolName {
+                    width: 30vw;
+                }
+                div.title,
+                div.degree {
+                    width: 33vw;
+                    padding: 2vw;
+                    line-height: 3.3vw;
+                    font-size: 2.2vw;
+                }
+                div.dateRange,
+                div.schoolYear {
+                    padding: 2vw;
+                    line-height: 3vw;
+                }
+            }
+            @media screen and (min-width: 1600px) {
+                body {
+                    max-width: 1600px;
+                    margin: 0 auto;
+                }
+            }
         </style>
     </head>
     <body>
         <div class="pageFrame">
             <div class="name">Nat Johnson</div>
             <div class="linkedIn">
-                LinkedIn: <a href="https://www.linkedin.com/in/nat-johnson-8b68b4/">https://www.linkedin.com/in/nat-johnson-8b68b4/</a>
+                LinkedIn: <a href="https://www.linkedin.com/in/nat-johnson-8b68b4/" target="_blank">https://www.linkedin.com/in/nat-johnson-8b68b4/</a>
             </div>
             <div class="github">
-                Resume: <a href="https://ncj.github.io/resume">https://ncj.github.io/resume</a>
+                Resume: <a href="https://ncj.github.io/resume" target="_blank">https://ncj.github.io/resume</a>
             </div>
             <div class="personalInfoFrame">
                 <div class="addressFrame">
-                    <div class="placeholder">address</div>
+                    <div class="placeholder">a d d r e s s</div>
                     <div class="address p8">View,</div>
                     <div class="address p9">CA</div>
                     <div class="address p7">Mountain</div>
@@ -408,7 +663,7 @@
                     <div class="address p10">94043</div>
                 </div>
                 <div class="emailFrame">
-                    <div class="placeholder">email</div>
+                    <div class="placeholder">e m a i l</div>
                     <div class="email p7">com</div>
                     <div class="email p1">nat</div>
                     <div class="email p2">_</div>
@@ -418,7 +673,7 @@
                     <div class="email p4">@</div>
                 </div>
                 <div class="phoneFrame">
-                    <div class="placeholder">phone</div>
+                    <div class="placeholder">p h o n e</div>
                     <div class="phone p12">1</div>
                     <div class="phone p1">4</div>
                     <div class="phone p3">8</div>
@@ -459,9 +714,9 @@
                         </ul>
                         From mid-2018, as primary engineer for MZ's external marketing websites:
                         <ul>
-                            <li>Launched two brand new game websites and a completely revampled MZ corporate site.</li>
+                            <li>Launched three brand new game websites and a completely revamped MZ corporate site.</li>
                             <li>Updated four additional game websites, cleaning up templates and improving localization code.
-                            <li>Installed and/or configured/updated a content management system for each of these sites (Craft CMS), supporting between 7 and 14 languages for each game site.  Set up page templates, input fields, users/permissions, and localization, and updated Craft from version 2 to version 3.</li>
+                            <li>Installed and/or configured/updated a content management system for each websites (Craft CMS), supporting between 7 and 14 languages for each game site.  Set up page templates, input fields, users/permissions, and localization, and updated Craft from version 2 to version 3.</li>
                             <li>Built PHP code and databases to store user information, send out email and SMS messages, perform GeoIP lookups, and additional backend functionality.
                             <li>Managed AWS configuration for all marketing website staging and production servers, including Cloudfront, EC2 servers and load balancers, Route 53, SSL Certs, and security policy.</li>
                             <li>Created and/or updated Nginx configurations for all staging and production servers.</li>
