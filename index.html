@@ -13,7 +13,6 @@
                     width: 100%;
                     -webkit-font-smoothing: antialiased;
                     font-family: Arial, Helvetica, Sans-Serif;
-                    letter-spacing: 0.1rem;
                     font-size: 1.2vw;
                     line-height: 1.8vw;
                     margin: 0;
@@ -188,7 +187,7 @@
                 div.phoneFrame .placeholder {
                     width: 14vw;
                     padding: 0.5vw;
-                    border-radius: 1vw;
+                    border-radius: 0.3vw;
                     box-shadow: 0.3vw 0.3vw 0.8vw #000000;
                     font-size: 1.2vw;
                 }
@@ -249,6 +248,7 @@
                     border-bottom: 1px dotted;
                     font-size: 1.2vw;
                     line-height: 2.2vw;
+                    text-align: center;
                 }
                 div.experienceFrame {
                     position: absolute;
@@ -263,7 +263,6 @@
                     padding: 1vw;
                     font-size: 2vw;
                     font-weight: bold;
-                    letter-spacing: 0.2rem;
                     text-transform: uppercase;
                 }
 
@@ -322,7 +321,6 @@
                     width: 100%;
                     -webkit-font-smoothing: antialiased;
                     font-family: Arial, Helvetica, Sans-Serif;
-                    letter-spacing: 0.2rem;
                     font-size: 2vw;
                     line-height: 3.2vw;
                     margin: 0;
@@ -655,6 +653,7 @@
                     border-bottom: 1px dotted;
                     font-size: 2vw;
                     line-height: 3vw;
+                    text-align: center;
                 }
 
                 div.experienceFrame {
@@ -721,9 +720,8 @@
                 }
             }
 
-            @media screen and (min-width: 600px) {
+            @media screen and (min-width: 700px) {
                 body {
-                    letter-spacing: 0.1rem;
                     font-size: 1.2vw;
                     line-height: 2vw;
                 }
@@ -865,7 +863,7 @@
                 div.emailFrame .placeholder {
                     width: 20vw;
                     padding: 0.5vw;
-                    border-radius: 1vw;
+                    border-radius: 0.3vw;
                     box-shadow: 0.3vw 0.3vw 0.8vw #000000;
                     font-size: 1.2vw;
                 }
@@ -905,7 +903,7 @@
                 div.phoneFrame .placeholder {
                     width: 20vw;
                     padding: 0.5vw;
-                    border-radius: 1vw;
+                    border-radius: 0.3vw;
                     box-shadow: 0.3vw 0.3vw 0.8vw #000000;
                     font-size: 1.2vw;
                 }
@@ -1023,65 +1021,70 @@
     </head>
     <body>
         <div class="pageFrame">
-            <div class="name">Nat Johnson</div>
-            <div class="linkedIn">
-                LinkedIn: <a href="https://www.linkedin.com/in/nat-johnson-8b68b4/" target="_blank">https://www.linkedin.com/in/nat-johnson-8b68b4/</a>
-            </div>
-            <div class="github">
-                Resume: <a href="https://ncj.github.io/resume" target="_blank">https://ncj.github.io/resume</a>
-            </div>
-            <div class="personalInfoFrame">
-                <div class="addressFrame">
-                    <div class="placeholder">a d d r e s s</div>
-                    <div class="address p8">View,</div>
-                    <div class="address p9">CA</div>
-                    <div class="address p7">Mountain</div>
-                    <div class="address p5">Park</div>
-                    <div class="address p3">5</div>
-                    <div class="address p4">Whisman</div>
-                    <div class="address p2">4</div>
-                    <div class="address p6">Dr.</div>
-                    <div class="address p1">4</div>
-                    <div class="address p10">94043</div>
+            <div class="topFrame">
+                <div class="nameFrame">
+                    <div class="name">Nat Johnson</div>
+                    <div class="linkedIn">
+                        LinkedIn: <a href="https://www.linkedin.com/in/nat-johnson-8b68b4/" target="_blank">https://www.linkedin.com/in/nat-johnson-8b68b4/</a>
+                    </div>
+                    <div class="github">
+                        Resume: <a href="https://ncj.github.io/resume" target="_blank">https://ncj.github.io/resume</a>
+                    </div>
                 </div>
-                <div class="emailFrame">
-                    <div class="placeholder">e m a i l</div>
-                    <div class="email p7">com</div>
-                    <div class="email p1">nat</div>
-                    <div class="email p2">_</div>
-                    <div class="email p5">yahoo</div>
-                    <div class="email p3">johnson</div>
-                    <div class="email p6">.</div>
-                    <div class="email p4">@</div>
-                </div>
-                <div class="phoneFrame">
-                    <div class="placeholder">p h o n e</div>
-                    <div class="phone p12">1</div>
-                    <div class="phone p1">4</div>
-                    <div class="phone p3">8</div>
-                    <div class="phone p6">1</div>
-                    <div class="phone p9">4</div>
-                    <div class="phone p11">7</div>
-                    <div class="phone p2">0</div>
-                    <div class="phone p5">3</div>
-                    <div class="phone p7">3</div>
-                    <div class="phone p10">6</div>
-                    <div class="phone p8">&ndash;</div>
-                    <div class="phone p4">&ndash;</div>
+                <div class="personalInfoFrame">
+                    <div class="addressFrame">
+                        <div class="placeholder">a d d r e s s</div>
+                        <div class="address p8">View,</div>
+                        <div class="address p9">CA</div>
+                        <div class="address p7">Mountain</div>
+                        <div class="address p5">Park</div>
+                        <div class="address p3">5</div>
+                        <div class="address p4">Whisman</div>
+                        <div class="address p2">4</div>
+                        <div class="address p6">Dr.</div>
+                        <div class="address p1">4</div>
+                        <div class="address p10">94043</div>
+                    </div>
+                    <div class="emailFrame">
+                        <div class="placeholder">e m a i l</div>
+                        <div class="email p7">com</div>
+                        <div class="email p1">nat</div>
+                        <div class="email p2">_</div>
+                        <div class="email p5">yahoo</div>
+                        <div class="email p3">johnson</div>
+                        <div class="email p6">.</div>
+                        <div class="email p4">@</div>
+                    </div>
+                    <div class="phoneFrame">
+                        <div class="placeholder">p h o n e</div>
+                        <div class="phone p12">1</div>
+                        <div class="phone p1">4</div>
+                        <div class="phone p3">8</div>
+                        <div class="phone p6">1</div>
+                        <div class="phone p9">4</div>
+                        <div class="phone p11">7</div>
+                        <div class="phone p2">0</div>
+                        <div class="phone p5">3</div>
+                        <div class="phone p7">3</div>
+                        <div class="phone p10">6</div>
+                        <div class="phone p8">&ndash;</div>
+                        <div class="phone p4">&ndash;</div>
+                    </div>
                 </div>
             </div>
             <div class="summary">
-                Full stack web engineer, with an emphasis towards front-end.  Lifelong learner with 20+ years of startup experience, comfortable diving into any new platform or language.  Passionate about creating excellent code that elevates the user experience.
+                Senior/lead-level full-stack web engineer, with emphasis towards front-end.  20+ years of startup experience.
+                <p>
+                HTML/CSS/JavaScript: 20+ years | PHP: 8 years | React/Redux: 2 years | AWS: 2 years | Python: 1 year
             </div>
             <div class="experienceFrame">
-                <div class="experience">Experience</div>
                 <div class="companyFrame">
                     <div class="workTitle">
                         <div class="company">
                             MZ
                         </div>
                         <div class="title">
-                            Senior Software Engineer
+                            Sr. Software Engineer
                         </div>
                         <div class="dateRange">
                             Oct 2017 - May 2020
@@ -1128,7 +1131,7 @@
                             AppSense
                         </div>
                         <div class="title">
-                            Senior Design Engineer
+                            Sr. Design Engineer
                         </div>
                         <div class="dateRange">
                             Feb 2012 - Oct 2014
@@ -1141,10 +1144,10 @@
                 <div class="companyFrame">
                     <div class="workTitle">
                         <div class="company">
-                            ebrary
+                            Ebrary
                         </div>
                         <div class="title">
-                            Senior Software Engineer
+                            Sr. Software Engineer
                         </div>
                         <div class="dateRange">
                             Oct 2000 - July 2011
@@ -1154,7 +1157,9 @@
                         Member of the six-person engineering team which created the original Ebrary site for its initial launch in May 2001. Worked on many parts of the site in different roles, using Java/JSP, and HTML/CSS/JavaScript. Projects included payment processing, internationalization, build/release scripts, internal technology prototypes, customer support tools, reports, and custom projects for ebrary partners.
                     </div>
                 </div>
-                <div class="education">Education</div>
+                <div class="education">
+                    Education
+                </div>
                 <div class="schoolFrame">
                     <div class="schoolTitle">
                         <div class="schoolName">
